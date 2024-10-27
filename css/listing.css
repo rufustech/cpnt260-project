@@ -1,13 +1,10 @@
 .grid-container {
-  display: grid;
+  grid-template-columns: 1fr; /* Single column layout on smaller screens */
   grid-template-areas:
-    "header header"
-    "grid-sidebar grid-main"
-    "footer footer";
-  grid-template-columns: 400px 1fr;
-  grid-template-rows: auto 1fr auto;
-  height: 100vh;
-  width: 100vw;
+    "header"
+    "grid-main"
+    "grid-sidebar"
+    "footer";
 }
 
 header {
@@ -44,3 +41,18 @@ footer {
   font-weight: 600;
   font-style: normal;
 }
+
+@media (min-width: 1024px)  {
+  .grid-container {
+    display: grid;
+    grid-template-areas:
+      "header header"
+      "grid-sidebar grid-main"
+      "footer footer";
+    grid-template-columns: 400px 1fr;
+    grid-template-rows: auto 1fr auto;
+    height: 100vh;
+    width: 100vw;
+
+  
+  }
