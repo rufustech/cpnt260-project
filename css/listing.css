@@ -1,0 +1,46 @@
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "grid-sidebar grid-main"
+    "footer footer";
+  grid-template-columns: 400px 1fr;
+  grid-template-rows: auto 1fr auto;
+  height: 100vh;
+  width: 100vw;
+}
+
+header {
+  grid-area: header;
+  background-color: aqua;
+  color: white;
+  height: 56px; /* Fixed header height */
+  text-align: center;
+}
+
+.grid-sidebar {
+  grid-area: grid-sidebar;
+  background-color: #f8f8f8; /* Optional background for the sidebar */
+  padding: 1rem;
+  overflow-y: auto; /* Allow scrolling in case sidebar content overflows */
+}
+
+.grid-main {
+  grid-area: grid-main;
+  background-color: #fff; /* Optional background for the main content */
+  padding: 1rem;
+  overflow-y: auto; /* Allow scrolling in case main content overflows */
+}
+
+footer {
+  grid-area: footer;
+  background-color: rgb(236, 140, 14);
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+.petit-formal-script-regular {
+  font-family: "Petit Formal Script", cursive;
+  font-weight: 600;
+  font-style: normal;
+}

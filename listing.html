@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/listing.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Petit+Formal+Script&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <main class="grid-container">
+      <header
+        class="flex shadow-md py-4 px-4 sm:px-10 bg-white font-[sans-serif] min-h-[70px] tracking-wide relative z-50 sticky top-0"
+      >
+        <div class="flex flex-wrap items-center justify-between gap-5 w-full">
+          <a href="index.html" class="petit-formal-script-regular text-black">
+            <span class="text-red-600 text-5xl">U</span>rban<span
+              class="text-blue-800 text-4xl"
+              >C</span
+            >ribz
+          </a>
+
+          <div
+            id="collapseMenu"
+            class="max-lg:hidden lg:!block max-lg:before:fixed max-lg:before:bg-black max-lg:before:opacity-50 max-lg:before:inset-0 max-lg:before:z-50"
+          >
+            <button
+              id="toggleClose"
+              class="lg:hidden fixed top-2 right-4 z-[100] rounded-full bg-white p-3"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-4 fill-black"
+                viewBox="0 0 320.591 320.591"
+              >
+                <path
+                  d="M30.391 318.583a30.37 30.37 0 0 1-21.56-7.288c-11.774-11.844-11.774-30.973 0-42.817L266.643 10.665c12.246-11.459 31.462-10.822 42.921 1.424 10.362 11.074 10.966 28.095 1.414 39.875L51.647 311.295a30.366 30.366 0 0 1-21.256 7.288z"
+                  data-original="#000000"
+                ></path>
+                <path
+                  d="M287.9 318.583a30.37 30.37 0 0 1-21.257-8.806L8.83 51.963C-2.078 39.225-.595 20.055 12.143 9.146c11.369-9.736 28.136-9.736 39.504 0l259.331 257.813c12.243 11.462 12.876 30.679 1.414 42.922-.456.487-.927.958-1.414 1.414a30.368 30.368 0 0 1-23.078 7.288z"
+                  data-original="#000000"
+                ></path>
+              </svg>
+            </button>
+
+            <ul
+              class="lg:flex gap-x-5 max-lg:space-y-3 max-lg:fixed max-lg:bg-white max-lg:w-1/2 max-lg:min-w-[300px] max-lg:top-0 max-lg:left-0 max-lg:p-6 max-lg:h-full max-lg:shadow-md max-lg:overflow-auto z-50"
+            >
+              <li class="mb-6 hidden max-lg:block">
+                <a href="javascript:void(0)"
+                  ><img
+                    src="https://readymadeui.com/readymadeui.svg"
+                    alt="logo"
+                    class="w-full"
+                  />
+                </a>
+              </li>
+              <li class="max-lg:border-b border-gray-300 max-lg:py-3 px-3">
+                <a
+                  href="javascript:void(0)"
+                  class="hover:text-[#007bff] text-[#007bff] block font-semibold text-[15px]"
+                  >Home</a
+                >
+              </li>
+              <li class="max-lg:border-b border-gray-300 max-lg:py-3 px-3">
+                <a
+                  href="javascript:void(0)"
+                  class="hover:text-[#007bff] text-gray-500 block font-semibold text-[15px]"
+                  >Shop</a
+                >
+              </li>
+              <li class="max-lg:border-b border-gray-300 max-lg:py-3 px-3">
+                <a
+                  href="javascript:void(0)"
+                  class="hover:text-[#007bff] text-gray-500 block font-semibold text-[15px]"
+                  >Feature</a
+                >
+              </li>
+              <!-- <li class="max-lg:border-b border-gray-300 max-lg:py-3 px-3">
+              <a
+                href="javascript:void(0)"
+                class="hover:text-[#007bff] text-gray-500 block font-semibold text-[15px]"
+                >Blog</a
+              >
+            </li> -->
+              <li class="max-lg:border-b border-gray-300 max-lg:py-3 px-3">
+                <a
+                  href="javascript:void(0)"
+                  class="hover:text-[#007bff] text-gray-500 block font-semibold text-[15px]"
+                  >About</a
+                >
+              </li>
+              <li class="max-lg:border-b border-gray-300 max-lg:py-3 px-3">
+                <a
+                  href="contact.html"
+                  class="hover:text-[#007bff] text-gray-500 block font-semibold text-[15px]"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="flex max-lg:ml-auto space-x-3">
+            <button
+              class="px-4 py-2 text-sm rounded-full font-bold text-white border-2 border-[#007bff] bg-[#007bff] transition-all ease-in-out duration-300 hover:bg-transparent hover:text-[#007bff]"
+            >
+              Login
+            </button>
+            <button
+              class="px-4 py-2 text-sm rounded-full font-bold text-white border-2 border-[#007bff] bg-[#007bff] transition-all ease-in-out duration-300 hover:bg-transparent hover:text-[#007bff]"
+            >
+              Sign up
+            </button>
+
+            <button id="toggleOpen" class="lg:hidden">
+              <svg
+                class="w-7 h-7"
+                fill="#000"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <section class="grid-sidebar">
+        <button
+          data-drawer-target="default-sidebar"
+          data-drawer-toggle="default-sidebar"
+          aria-controls="default-sidebar"
+          type="button"
+          class="inline-flex items-center p-2 mt-2 ml-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+        >
+          <span class="sr-only">Open sidebar</span>
+          <svg
+            class="w-6 h-6"
+            aria-hidden="true"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clip-rule="evenodd"
+              fill-rule="evenodd"
+              d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"
+            ></path>
+          </svg>
+        </button>
+        <aside
+          id="default-sidebar"
+          class="grid-sidebar top-0 left-0 z-40 w-full h-screen sm:translate-x-0"
+          aria-label="Sidenav"
+        >
+          <div
+            class="overflow-x-auto py-5 px-3 h-full bg-white border-r border-gray-200"
+          >
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#"
+                  class="flex items-center p-2 text-2xl font-normal text-gray-600 rounded-lg hover:bg-gray-100 group"
+                >
+                  <span class="ml-1"
+                    >1 Address Road<br />Mahogany, Calgary</span
+                  >
+                </a>
+              </li>
+              <li>
+                <h3>Description</h3>
+                <p>
+                  Lovely two-storey home in Falconridge is nestled on a quiet,
+                  private street, directly across from a serene green space, in
+                  one of the most desirable areas of the community. Offering
+                  1,201 square feet of thoughtfully designed living space, this
+                  3-bedroom, 1.5-bathroom home has been meticulously maintained
+                  and updated with modern touches
+                </p>
+              </li>
+              <li>
+                <div class="property-details bg-gray-100 rounded-lg p-4">
+                  <h2 class="text-lg font-bold mb-4 text-gray-800">
+                    Property Information
+                  </h2>
+                  <ul class="space-y-2">
+                    <li class="flex justify-between">
+                      <span class="font-semibold text-gray-600">MLS® #:</span>
+                      <span>A2171863</span>
+                    </li>
+                    <li class="flex justify-between">
+                      <span class="font-semibold text-gray-600">Price:</span>
+                      <span>$475,000</span>
+                    </li>
+                    <li class="flex justify-between">
+                      <span class="font-semibold text-gray-600">Bedrooms:</span>
+                      <span>3</span>
+                    </li>
+                    <li class="flex justify-between">
+                      <span class="font-semibold text-gray-600"
+                        >Bathrooms:</span
+                      >
+                      <span>1.5</span>
+                    </li>
+                    <li class="flex justify-between">
+                      <span class="font-semibold text-gray-600"
+                        >Full Baths:</span
+                      >
+                      <span>1</span>
+                    </li>
+                    <li class="flex justify-between">
+                      <span class="font-semibold text-gray-600"
+                        >Half Baths:</span
+                      >
+                      <span>1</span>
+                    </li>
+                    <li class="flex justify-between">
+                      <span class="font-semibold text-gray-600"
+                        >Square Footage:</span
+                      >
+                      <span>1,202</span>
+                    </li>
+                    <li class="flex justify-between">
+                      <span class="font-semibold text-gray-600">Lot SQFT:</span>
+                      <span>4,811</span>
+                    </li>
+                    <li class="flex justify-between">
+                      <span class="font-semibold text-gray-600"
+                        >Year Built:</span
+                      >
+                      <span>1980</span>
+                    </li>
+                    <li class="flex justify-between">
+                      <span class="font-semibold text-gray-600">Type:</span>
+                      <span>Residential</span>
+                    </li>
+                    <li class="flex justify-between">
+                      <span class="font-semibold text-gray-600">Sub-Type:</span>
+                      <span>Detached</span>
+                    </li>
+                    <li class="flex justify-between">
+                      <span class="font-semibold text-gray-600">Style:</span>
+                      <span>2 Storey</span>
+                    </li>
+                    <li class="flex justify-between">
+                      <span class="font-semibold text-gray-600">Status:</span>
+                      <span class="text-green-600 font-semibold">Active</span>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+
+              <!-- Interior -->
+
+              <li >
+                <div class="property-details bg-gray-100 rounded-lg p-4 ">
+                  <h2 class="text-lg font-bold mb-4 text-gray-800">
+                    Property Information
+                  </h2>
+                  <ul class="space-y-2">
+                    <li class="flex justify-between">
+                      <span class="font-semibold text-gray-600">MLS® #:</span>
+                      <span>A2171863</span>
+                    </li>
+                    <li class="flex justify-between">
+                      <span class="font-semibold text-gray-600">Price:</span>
+                      <span>$475,000</span>
+                    </li>
+                    <li class="flex justify-between">
+                      <span class="font-semibold text-gray-600">Bedrooms:</span>
+                      <span>3</span>
+                    </li>
+                    <li class="flex justify-between">
+                      <span class="font-semibold text-gray-600"
+                        >Bathrooms:</span
+                      >
+                      <span>1.5</span>
+                    </li>
+                    <li class="flex justify-between">
+                      <span class="font-semibold text-gray-600"
+                        >Full Baths:</span
+                      >
+                      <span>1</span>
+                    </li>
+                    <li class="flex justify-between">
+                      <span class="font-semibold text-gray-600"
+                        >Half Baths:</span
+                      >
+                      <span>1</span>
+                    </li>
+                    <li class="flex justify-between">
+                      <span class="font-semibold text-gray-600"
+                        >Square Footage:</span
+                      >
+                      <span>1,202</span>
+                    </li>
+                    <li class="flex justify-between">
+                      <span class="font-semibold text-gray-600">Lot SQFT:</span>
+                      <span>4,811</span>
+                    </li>
+                    <li class="flex justify-between">
+                      <span class="font-semibold text-gray-600"
+                        >Year Built:</span
+                      >
+                      <span>1980</span>
+                    </li>
+                    <li class="flex justify-between">
+                      <span class="font-semibold text-gray-600">Type:</span>
+                      <span>Residential</span>
+                    </li>
+                    <li class="flex justify-between">
+                      <span class="font-semibold text-gray-600">Sub-Type:</span>
+                      <span>Detached</span>
+                    </li>
+                    <li class="flex justify-between">
+                      <span class="font-semibold text-gray-600">Style:</span>
+                      <span>2 Storey</span>
+                    </li>
+                    <li class="flex justify-between">
+                      <span class="font-semibold text-gray-600">Status:</span>
+                      <span class="text-green-600 font-semibold">Active</span>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+             
+           
+          </div>
+          <div
+            class="hidden absolute bottom-0 left-0 justify-center p-4 space-x-4 w-full lg:flex bg-white dark:bg-gray-800 z-20 border-r border-gray-200 dark:border-gray-700 mt-8"
+          >
+            <a
+              href="#"
+              class="inline-flex justify-center p-2 text-gray-500 rounded cursor-pointer dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-600"
+            >
+              <svg
+                aria-hidden="true"
+                class="w-6 h-6"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M5 4a1 1 0 00-2 0v7.268a2 2 0 000 3.464V16a1 1 0 102 0v-1.268a2 2 0 000-3.464V4zM11 4a1 1 0 10-2 0v1.268a2 2 0 000 3.464V16a1 1 0 102 0V8.732a2 2 0 000-3.464V4zM16 3a1 1 0 011 1v7.268a2 2 0 010 3.464V16a1 1 0 11-2 0v-1.268a2 2 0 010-3.464V4a1 1 0 011-1z"
+                ></path>
+              </svg>
+            </a>
+            <a
+              href="#"
+              data-tooltip-target="tooltip-settings"
+              class="inline-flex justify-center p-2 text-gray-500 rounded cursor-pointer dark:text-gray-400 dark:hover:text-white hover:text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-600"
+            >
+              <svg
+                aria-hidden="true"
+                class="w-6 h-6"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </a>
+            <div
+              id="tooltip-settings"
+              role="tooltip"
+              class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 transition-opacity duration-300 tooltip"
+            >
+              Settings page
+              <div class="tooltip-arrow" data-popper-arrow></div>
+            </div>
+            <button
+              type="button"
+              data-dropdown-toggle="language-dropdown"
+              class="inline-flex justify-center p-2 text-gray-500 rounded cursor-pointer dark:hover:text-white dark:text-gray-400 hover:text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-600"
+            >
+              <svg
+                aria-hidden="true"
+                class="h-5 w-5 rounded-full mt-0.5"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 0 3900 3900"
+              >
+                <path fill="#b22234" d="M0 0h7410v3900H0z" />
+                <path
+                  d="M0 450h7410m0 600H0m0 600h7410m0 600H0m0 600h7410m0 600H0"
+                  stroke="#fff"
+                  stroke-width="300"
+                />
+                <path fill="#3c3b6e" d="M0 0h2964v2100H0z" />
+                <g fill="#fff">
+                  <g id="d">
+                    <g id="c">
+                      <g id="e">
+                        <g id="b">
+                          <path
+                            id="a"
+                            d="M247 90l70.534 217.082-184.66-134.164h228.253L176.466 307.082z"
+                          />
+                          <use xlink:href="#a" y="420" />
+                          <use xlink:href="#a" y="840" />
+                          <use xlink:href="#a" y="1260" />
+                        </g>
+                        <use xlink:href="#a" y="1680" />
+                      </g>
+                      <use xlink:href="#b" x="247" y="210" />
+                    </g>
+                    <use xlink:href="#c" x="494" />
+                  </g>
+                  <use xlink:href="#d" x="988" />
+                  <use xlink:href="#c" x="1976" />
+                  <use xlink:href="#e" x="2470" />
+                </g>
+              </svg>
+            </button>
+            <!-- Dropdown -->
+            <div
+              class="hidden z-50 my-4 text-base list-none bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700"
+              id="language-dropdown"
+            >
+              <ul class="py-1" role="none">
+                <li>
+                  <a
+                    href="#"
+                    class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:text-white dark:text-gray-300 dark:hover:bg-gray-600"
+                    role="menuitem"
+                  >
+                    <div class="inline-flex items-center">
+                      <svg
+                        aria-hidden="true"
+                        class="h-3.5 w-3.5 rounded-full mr-2"
+                        xmlns="http://www.w3.org/2000/svg"
+                        id="flag-icon-css-us"
+                        viewBox="0 0 512 512"
+                      >
+                        <g fill-rule="evenodd">
+                          <g stroke-width="1pt">
+                            <path
+                              fill="#bd3d44"
+                              d="M0 0h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0z"
+                              transform="scale(3.9385)"
+                            />
+                            <path
+                              fill="#fff"
+                              d="M0 10h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0z"
+                              transform="scale(3.9385)"
+                            />
+                          </g>
+                          <path
+                            fill="#192f5d"
+                            d="M0 0h98.8v70H0z"
+                            transform="scale(3.9385)"
+                          />
+                          <path
+                            fill="#fff"
+                            d="M8.2 3l1 2.8H12L9.7 7.5l.9 2.7-2.4-1.7L6 10.2l.9-2.7-2.4-1.7h3zm16.5 0l.9 2.8h2.9l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8H45l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.4 0l1 2.8h2.8l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm16.5 0l.9 2.8h2.9l-2.4 1.7 1 2.7L74 8.5l-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8h2.9L92 7.5l1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm-74.1 7l.9 2.8h2.9l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.4 0l1 2.8h2.8l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm16.5 0l.9 2.8h2.9l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8h2.9l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7H65zm16.4 0l1 2.8H86l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm-74 7l.8 2.8h3l-2.4 1.7.9 2.7-2.4-1.7L6 24.2l.9-2.7-2.4-1.7h3zm16.4 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8H45l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.4 0l1 2.8h2.8l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm16.5 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8h2.9L92 21.5l1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm-74.1 7l.9 2.8h2.9l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.4 0l1 2.8h2.8l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm16.5 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8h2.9l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7H65zm16.4 0l1 2.8H86l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm-74 7l.8 2.8h3l-2.4 1.7.9 2.7-2.4-1.7L6 38.2l.9-2.7-2.4-1.7h3zm16.4 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8H45l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.4 0l1 2.8h2.8l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm16.5 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8h2.9L92 35.5l1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm-74.1 7l.9 2.8h2.9l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.4 0l1 2.8h2.8l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm16.5 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8h2.9l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7H65zm16.4 0l1 2.8H86l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm-74 7l.8 2.8h3l-2.4 1.7.9 2.7-2.4-1.7L6 52.2l.9-2.7-2.4-1.7h3zm16.4 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8H45l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.4 0l1 2.8h2.8l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm16.5 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8h2.9L92 49.5l1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm-74.1 7l.9 2.8h2.9l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.4 0l1 2.8h2.8l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm16.5 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8h2.9l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7H65zm16.4 0l1 2.8H86l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm-74 7l.8 2.8h3l-2.4 1.7.9 2.7-2.4-1.7L6 66.2l.9-2.7-2.4-1.7h3zm16.4 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8H45l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.4 0l1 2.8h2.8l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm16.5 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8h2.9L92 63.5l1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9z"
+                            transform="scale(3.9385)"
+                          />
+                        </g>
+                      </svg>
+                      English (US)
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:text-white dark:hover:bg-gray-600"
+                    role="menuitem"
+                  >
+                    <div class="inline-flex items-center">
+                      <svg
+                        aria-hidden="true"
+                        class="h-3.5 w-3.5 rounded-full mr-2"
+                        xmlns="http://www.w3.org/2000/svg"
+                        id="flag-icon-css-de"
+                        viewBox="0 0 512 512"
+                      >
+                        <path fill="#ffce00" d="M0 341.3h512V512H0z" />
+                        <path d="M0 0h512v170.7H0z" />
+                        <path fill="#d00" d="M0 170.7h512v170.6H0z" />
+                      </svg>
+                      Deutsch
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:text-white dark:hover:bg-gray-600"
+                    role="menuitem"
+                  >
+                    <div class="inline-flex items-center">
+                      <svg
+                        aria-hidden="true"
+                        class="h-3.5 w-3.5 rounded-full mr-2"
+                        xmlns="http://www.w3.org/2000/svg"
+                        id="flag-icon-css-it"
+                        viewBox="0 0 512 512"
+                      >
+                        <g fill-rule="evenodd" stroke-width="1pt">
+                          <path fill="#fff" d="M0 0h512v512H0z" />
+                          <path fill="#009246" d="M0 0h170.7v512H0z" />
+                          <path fill="#ce2b37" d="M341.3 0H512v512H341.3z" />
+                        </g>
+                      </svg>
+                      Italiano
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:text-white dark:text-gray-300 dark:hover:bg-gray-600"
+                    role="menuitem"
+                  >
+                    <div class="inline-flex items-center">
+                      <svg
+                        aria-hidden="true"
+                        class="h-3.5 w-3.5 rounded-full mr-2"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        id="flag-icon-css-cn"
+                        viewBox="0 0 512 512"
+                      >
+                        <defs>
+                          <path
+                            id="a"
+                            fill="#ffde00"
+                            d="M1-.3L-.7.8 0-1 .6.8-1-.3z"
+                          />
+                        </defs>
+                        <path fill="#de2910" d="M0 0h512v512H0z" />
+                        <use
+                          width="30"
+                          height="20"
+                          transform="matrix(76.8 0 0 76.8 128 128)"
+                          xlink:href="#a"
+                        />
+                        <use
+                          width="30"
+                          height="20"
+                          transform="rotate(-121 142.6 -47) scale(25.5827)"
+                          xlink:href="#a"
+                        />
+                        <use
+                          width="30"
+                          height="20"
+                          transform="rotate(-98.1 198 -82) scale(25.6)"
+                          xlink:href="#a"
+                        />
+                        <use
+                          width="30"
+                          height="20"
+                          transform="rotate(-74 272.4 -114) scale(25.6137)"
+                          xlink:href="#a"
+                        />
+                        <use
+                          width="30"
+                          height="20"
+                          transform="matrix(16 -19.968 19.968 16 256 230.4)"
+                          xlink:href="#a"
+                        />
+                      </svg>
+                      中文 (繁體)
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </aside>
+      </section>
+      <section class="grid-main">
+        
+        <section class="bg-white dark:bg-gray-900">
+            <div class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
+                <div class="mr-auto place-self-center lg:col-span-5">
+                    <h1 class="max-w-2xl p-2 mb-4 text-2xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-5xl dark:text-gray-600 text-gray-700"><span class="ml-1 petit-formal-script-regular"
+                        >1 Address Road<br />Mahogany, Calgary</span
+                      ></h1>
+                    <p class="max-w-2xl p-4 mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">The west-facing backyard is a perfect retreat, featuring a spacious deck where you can relax and enjoy stunning sunsets</p>
+                    <a href="#" class="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900">
+                        Get started
+                        <svg class="w-5 h-5 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                    </a>
+                    <a href="#" class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800">
+                        Speak to Sales
+                    </a> 
+                </div>
+                <div class="hidden lg:mt-0 lg:col-span-7 lg:flex">
+                    <img src="/images/house.jpg" alt="mockup">
+                </div>                
+            </div>
+
+
+<div class="grid gap-4 mx-auto">
+    <!-- <div>
+        <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/featured/image.jpg" alt="">
+    </div> -->
+    <div class="grid grid-cols-5 gap-4">
+        <div>
+            <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-1.jpg" alt="">
+        </div>
+        <div>
+            <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-2.jpg" alt="">
+        </div>
+        <div>
+            <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-3.jpg" alt="">
+        </div>
+        <div>
+            <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-4.jpg" alt="">
+        </div>
+        <div>
+            <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-5.jpg" alt="">
+        </div>
+    </div>
+</div>
+
+        </section>
+      </section>
+
+      <!-- Footer -->
+
+      <footer class="font-sans tracking-wide bg-[#213343] py-10 px-10 mt-20">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div>
+            <h4 class="text-[#FFA726] font-semibold text-lg mb-6">
+              Quick Links
+            </h4>
+            <ul class="space-y-5">
+              <li>
+                <a
+                  href="javascript:void(0)"
+                  class="hover:text-[#FFA726] text-gray-300 text-[15px] transition-all"
+                  >Our Story</a
+                >
+              </li>
+              <li>
+                <a
+                  href="javascript:void(0)"
+                  class="hover:text-[#FFA726] text-gray-300 text-[15px] transition-all"
+                  >Newsroom</a
+                >
+              </li>
+              <li>
+                <a
+                  href="javascript:void(0)"
+                  class="hover:text-[#FFA726] text-gray-300 text-[15px] transition-all"
+                  >Careers</a
+                >
+              </li>
+              <li>
+                <a
+                  href="javascript:void(0)"
+                  class="hover:text-[#FFA726] text-gray-300 text-[15px] transition-all"
+                  >Blog</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="text-[#FFA726] font-semibold text-lg mb-6">Services</h4>
+            <ul class="space-y-5">
+              <li>
+                <a
+                  href="javascript:void(0)"
+                  class="hover:text-[#FFA726] text-gray-300 text-[15px] transition-all"
+                  >Web Development</a
+                >
+              </li>
+              <li>
+                <a
+                  href="javascript:void(0)"
+                  class="hover:text-[#FFA726] text-gray-300 text-[15px] transition-all"
+                  >Testing Automation</a
+                >
+              </li>
+              <li>
+                <a
+                  href="javascript:void(0)"
+                  class="hover:text-[#FFA726] text-gray-300 text-[15px] transition-all"
+                  >AWS Development Services</a
+                >
+              </li>
+              <li>
+                <a
+                  href="javascript:void(0)"
+                  class="hover:text-[#FFA726] text-gray-300 text-[15px] transition-all"
+                  >Mobile App Development</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="text-[#FFA726] font-semibold text-lg mb-6">Platforms</h4>
+            <ul class="space-y-5">
+              <li>
+                <a
+                  href="javascript:void(0)"
+                  class="hover:text-[#FFA726] text-gray-300 text-[15px] transition-all"
+                  >Hubspot</a
+                >
+              </li>
+              <li>
+                <a
+                  href="javascript:void(0)"
+                  class="hover:text-[#FFA726] text-gray-300 text-[15px] transition-all"
+                  >Marketo Integration Services</a
+                >
+              </li>
+              <li>
+                <a
+                  href="javascript:void(0)"
+                  class="hover:text-[#FFA726] text-gray-300 text-[15px] transition-all"
+                  >Marketing Glossary</a
+                >
+              </li>
+              <li>
+                <a
+                  href="javascript:void(0)"
+                  class="hover:text-[#FFA726] text-gray-300 text-[15px] transition-all"
+                  >UIPath</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="text-[#FFA726] font-semibold text-lg mb-6">Company</h4>
+            <ul class="space-y-5">
+              <li>
+                <a
+                  href="javascript:void(0)"
+                  class="hover:text-[#FFA726] text-gray-300 text-[15px] transition-all"
+                  >Accessibility</a
+                >
+              </li>
+              <li>
+                <a
+                  href="javascript:void(0)"
+                  class="hover:text-[#FFA726] text-gray-300 text-[15px] transition-all"
+                  >About</a
+                >
+              </li>
+              <li>
+                <a
+                  href="javascript:void(0)"
+                  class="hover:text-[#FFA726] text-gray-300 text-[15px] transition-all"
+                  >Contact</a
+                >
+              </li>
+              <li>
+                <a
+                  href="javascript:void(0)"
+                  class="hover:text-[#FFA726] text-gray-300 text-[15px] transition-all"
+                  >Learn more</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="border-t text-center border-[#6b5f5f] pt-8 mt-8">
+          <p class="text-gray-300 text-[15px]">
+            © Rufaro Mucheri. All rights reserved.
+          </p>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>
