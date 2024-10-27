@@ -3,7 +3,7 @@
 }
 
 .hero-image {
-  background-image: url(/images/house.jpg);
+  background-image: url(./images/house.jpg);
   height: 40rem;
   background-size: auto;
   background-position: center;
