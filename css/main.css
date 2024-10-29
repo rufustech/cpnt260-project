@@ -13,7 +13,13 @@
 .hero-text {
   background-color: rgba(53, 47, 47, 0.8);
 }
-
+footer {
+  grid-area: footer;
+  background-color: rgb(236, 140, 14);
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
 /* Playfair Display */
 /* Cormorant Garamond
 Merriweather
@@ -25,5 +31,3 @@ Libre Baskerville */
 /* Prata
 Marck Script */
 /* Qwigley */
-
-

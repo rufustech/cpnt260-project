@@ -1,6 +1,11 @@
+.blog-video {
+  padding-top: 56.25%;
+}
 
-
-
-.blog-video{
-    padding-top: 56.25%
+footer {
+  grid-area: footer;
+  background-color: rgb(236, 140, 14);
+  color: white;
+  text-align: center;
+  padding: 10px;
 }
